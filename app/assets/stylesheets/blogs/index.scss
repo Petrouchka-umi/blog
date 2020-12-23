@@ -21,7 +21,27 @@
   }
 }
 
+.img-fluid {
+  // width: 200px;
+  // height: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 .blog-body {
   height: 500px;
   overflow: scroll;
+}
+
+.blog-box {
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  display: flex;
+  .blog-image {
+    margin: 5px 10px;
+  }
+  .blog-nav {
+    margin: 5px 15px;
+  }
 }

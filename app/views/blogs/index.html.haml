@@ -13,10 +13,12 @@
       .blog-content
         = link_to blog do
           .blog-box
-            %td= image_tag blog.image.url, crop:("120x120+0+0"), class:'img-fluid' 
-            %td= blog.title
-            %td= blog.created_at.strftime("%Y年%m月%d日")
-            %td= render 'blogs/tag_list', tag_list: blog.tag_list
+            .blog-image
+              %td= image_tag blog.image.url, crop:("120x120+0+0"), class:'img-fluid' 
+            .blog-nav
+              %td= blog.title
+              %td= blog.created_at.strftime("%Y年%m月%d日")
+              %td= render 'blogs/tag_list', tag_list: blog.tag_list
 
   %br
 
