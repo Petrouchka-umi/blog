@@ -88,3 +88,170 @@ Migrating to CreateBlogs (20201223015100)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5941717438932325785')[0m
   [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2020-12-23 11:01:06 +0900
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.0ms | Allocations: 482)
+Completed 200 OK in 37ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 5568)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:01:11 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.9ms | Allocations: 695)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4301)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:03:03 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/index.html.haml within layouts/application (Duration: 27.4ms | Allocations: 5444)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/sakaotakukai/application/blog/public/packs
+[Webpacker] Hash: b0a38790a00d481830fd
+Version: webpack 4.44.2
+Time: 3176ms
+Built at: 2020/12/23 11:03:10
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3779c53d5b8a213ac13d.js    469 KiB  application  [emitted] [immutable]  application
+js/application-3779c53d5b8a213ac13d.js.map    528 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3779c53d5b8a213ac13d.js js/application-3779c53d5b8a213ac13d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 799 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 9 hidden modules
+
+Completed 200 OK in 6538ms (Views: 6507.3ms | ActiveRecord: 23.1ms | Allocations: 1626959)
+
+
+Started GET "/blogs/new" for ::1 at 2020-12-23 11:03:23 +0900
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.haml within layouts/application
+  Rendered blogs/_form.html.haml (Duration: 15.9ms | Allocations: 8825)
+  Rendered blogs/new.html.haml within layouts/application (Duration: 19.8ms | Allocations: 10608)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.1ms | Allocations: 13950)
+
+
+  
+ActionView::Template::Error (undefined method `tag_list' for #<Blog id: nil, title: nil, created_at: nil, updated_at: nil>):
+    13:     .tag-box
+    14:       .tag-form
+    15:         = f.label :tag_list, "タグ追加"
+    16:         = f.text_field :tag_list, value: @blog.tag_list.join(','), class: "tag-list_form", placeholder: "タグ #〇〇"
+    17:       %ul.tag-list
+    18:         %li #自己啓発
+    19:         %li #お金
+  
+app/views/blogs/_form.html.haml:16
+app/views/blogs/_form.html.haml:1
+app/views/blogs/new.html.haml:3
+Started GET "/" for ::1 at 2020-12-23 11:03:27 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/index.html.haml within layouts/application (Duration: 1.3ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms | Allocations: 11590)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:06:17 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  Rendered blogs/_header.html.haml (Duration: 31.8ms | Allocations: 2377)
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/_footer.html.haml (Duration: 1.7ms | Allocations: 1850)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 41.8ms | Allocations: 9747)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 66.1ms | ActiveRecord: 2.0ms | Allocations: 24594)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:06:29 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  Rendered blogs/_header.html.haml (Duration: 0.5ms | Allocations: 110)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 2.8ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.4ms | Allocations: 11777)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:06:30 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  Rendered blogs/_header.html.haml (Duration: 0.3ms | Allocations: 105)
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 2.0ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 11759)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:06:35 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  Rendered blogs/_header.html.haml (Duration: 0.3ms | Allocations: 105)
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 2.0ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 11765)
+
+
+Started GET "/" for ::1 at 2020-12-23 11:06:56 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  Rendered blogs/_header.html.haml (Duration: 2.9ms | Allocations: 2364)
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/_footer.html.haml (Duration: 2.7ms | Allocations: 1841)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 11.4ms | Allocations: 9458)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.3ms | Allocations: 23482)
+
+
+Started GET "/blogs/new" for ::1 at 2020-12-23 11:07:02 +0900
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.haml within layouts/application
+  Rendered blogs/_form.html.haml (Duration: 9.2ms | Allocations: 7337)
+  Rendered blogs/new.html.haml within layouts/application (Duration: 12.7ms | Allocations: 9103)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.3ms | Allocations: 12265)
+
+
+  
+ActionView::Template::Error (undefined method `tag_list' for #<Blog id: nil, title: nil, created_at: nil, updated_at: nil>):
+    13:     .tag-box
+    14:       .tag-form
+    15:         = f.label :tag_list, "タグ追加"
+    16:         = f.text_field :tag_list, value: @blog.tag_list.join(','), class: "tag-list_form", placeholder: "タグ #〇〇"
+    17:       %ul.tag-list
+    18:         %li #自己啓発
+    19:         %li #お金
+  
+app/views/blogs/_form.html.haml:16
+app/views/blogs/_form.html.haml:1
+app/views/blogs/new.html.haml:3
+Started GET "/" for ::1 at 2020-12-23 11:07:05 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  Rendered blogs/_header.html.haml (Duration: 0.3ms | Allocations: 107)
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs`[0m
+  ↳ app/views/blogs/index.html.haml:12
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 2.0ms | Allocations: 960)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 11792)
+
+

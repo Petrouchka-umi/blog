@@ -1,21 +1,29 @@
-%h1 Listing blogs
+= render "header"
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th
-      %th
-      %th
-
-  %tbody
-    - @blogs.each do |blog|
+.wrapper
+  %table
+    %thead
       %tr
-        %td= blog.title
-        %td= link_to 'Show', blog
-        %td= link_to 'Edit', edit_blog_path(blog)
-        %td= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
+        %th 記事一覧
+        %th
+        %th
+        %th
+  .main-content
+    - @blogs.each do |blog|
+      .blog-content
+        = link_to blog do
+          .blog-box
+            = image_tag blog.image.url, crop:("120x120+0+0"), class:'img-fluid' 
+            %td= blog.title
+            %td= blog.created_at.strftime("%Y年%m月%d日")
+            -# %td= image_tag @blog.image.variant(resize_to_fill:[800,600]).processed, crop:("120x120+0+0"), class:'img-fluid' if bolg.image.present?
+            %td= render 'blogs/tag_list', tag_list: blog.tag_list
 
-%br
+  %br
 
-= link_to 'New Blog', new_blog_path
+  .blog-new-btn
+    = link_to '新規記事作成', new_blog_path, class: "new-post"
+
+.side-contents
+
+= render "footer"

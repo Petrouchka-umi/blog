@@ -1,7 +1,10 @@
-%h1 Editing blog
+= render "header"
 
-= render 'form'
+.wrapper
+  = render 'form'
 
-= link_to 'Show', @blog
-\|
-= link_to 'Back', blogs_path
+  = link_to '詳細', @blog
+  \|
+  = link_to '戻る', blogs_path, class:"back"
+
+  = render "footer"
