@@ -1,0 +1,33 @@
+= form_for @blog do |f|
+  - if @blog.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
+      %ul
+        - @blog.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    .blog-title
+      = f.label :title, "タイトル"
+      = f.text_field :title, class: "blog-title_form", placeholder: "タイトル"
+    .tag-box
+      .tag-form
+        = f.label :tag_list, "タグ追加"
+        = f.text_field :tag_list, value: @blog.tag_list.join(','), class: "tag-list_form", placeholder: "タグ #〇〇"
+      %ul.tag-list
+        %li #自己啓発
+        %li #お金
+        %li #プログラミング
+        %li #医療
+        %li #グルメ
+    .images
+      = f.label :image, "記事トップ画像"
+      = f.file_field :image, accept: "image/png, image/jpeg, image/gif"
+
+  = f.rich_text_area :body, class:"blog-body"
+  .actions
+    - if @blog.persisted?
+      = f.submit '更新する', class: "submit"
+    - else
+      = f.submit '投稿する', class: "submit"
+

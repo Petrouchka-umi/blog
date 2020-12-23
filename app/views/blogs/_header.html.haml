@@ -1,0 +1,16 @@
+%header
+  .header-box
+    = link_to root_path ,calss: "blog-title" do
+      %h1 Umi-Blog
+    
+    .nav
+      -# - if current_user.admin?
+      -#   .admin-name
+      -#     = current_user.name
+      -#   .blog-new-btn
+      -#     = link_to '新規記事作成', new_blog_path, class: "new-post"
+      -#   .admin-logout
+      -#     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "new-post"
+      -# - else
+      -#   .reader ようこそ！
+

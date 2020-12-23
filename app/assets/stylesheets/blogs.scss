@@ -1,0 +1,48 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  border-bottom: 2px solid lightgray;
+  .header-box {
+    display: flex;
+    justify-content: space-around;
+    .nav{
+      display: flex;
+      margin-top: 25px;
+      .admin-name {
+        font-size: 22px;
+        color: skyblue;
+        font-family: "Cormorant Garamond", serif;
+      }
+      .admin-logout {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  // color: skyblue;
+  color: #FFCC33; 
+  font-size: 35px;
+  letter-spacing: .1em;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  .top {
+    margin: 20px 0;
+  }
+  .footer_title {
+    color: skyblue;
+    // color: snow;
+  }
+}
+
+a {
+  text-decoration: none;
+}

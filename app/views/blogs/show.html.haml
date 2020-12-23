@@ -1,0 +1,20 @@
+= render "header"
+
+%p#notice= notice
+
+.wrapper
+  %p
+    %b Title:
+    = @blog.title
+    = @blog.created_at.strftime("%Y年%m月%d日")
+    = @blog.body
+
+  .nav-box
+    .edit-box
+      = link_to '編集', edit_blog_path(@blog)
+
+      = link_to '削除', @blog, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }
+
+      = link_to '戻る', blogs_path, class:"back"
+
+  = render "footer"
