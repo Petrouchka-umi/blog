@@ -4,7 +4,7 @@
       %h1 Umi-Blog
     
     .nav
-      - if current_user.admin?
+      - if current_user
         .admin-name
           = current_user.name
         .blog-new-btn
@@ -14,3 +14,5 @@
       - else
         .reader ようこそ！
 
+  .header-contents
+    -# カテゴリーや写真挿入

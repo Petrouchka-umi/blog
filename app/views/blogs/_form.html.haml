@@ -14,12 +14,13 @@
       .tag-form
         = f.label :tag_list, "タグ追加"
         = f.text_field :tag_list, value: @blog.tag_list.join(','), class: "tag-list_form", placeholder: "タグ #〇〇"
-      %ul.tag-list
-        %li #自己啓発
-        %li #お金
-        %li #プログラミング
-        %li #医療
-        %li #グルメ
+      .tag-lists
+        %ul.tag-list
+          %li.tag #自己啓発
+          %li.tag #お金
+          %li.tag #プログラミング
+          %li.tag #医療
+          %li.tag #グルメsx
     .images
       = f.label :image, "記事トップ画像"
       = f.file_field :image, accept: "image/png, image/jpeg, image/gif"

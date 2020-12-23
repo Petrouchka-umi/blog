@@ -22,11 +22,10 @@
 }
 
 .img-fluid {
-  // width: 200px;
-  // height: 200px;
-  max-width: 100%;
-  height: auto;
+  width: 220px;
+  height: 150px;
   border-radius: 10px;
+  object-fit: cover; 
 }
 
 .blog-body {
@@ -43,5 +42,11 @@
   }
   .blog-nav {
     margin: 5px 15px;
+  }
+  .blog-time {
+    margin: 10px 0;
+  }
+  .blog-tags {
+    margin: 10px 0;
   }
 }

@@ -6,7 +6,7 @@ header {
   .header-box {
     display: flex;
     justify-content: space-around;
-    .nav{
+    .nav {
       display: flex;
       margin-top: 25px;
       .admin-name {
@@ -27,6 +27,10 @@ h1 {
   color: #FFCC33; 
   font-size: 35px;
   letter-spacing: .1em;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 footer {

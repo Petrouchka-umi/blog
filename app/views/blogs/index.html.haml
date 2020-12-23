@@ -4,7 +4,7 @@
   %table
     %thead
       %tr
-        %th 記事一覧
+        %h2 記事一覧
         %th
         %th
         %th
@@ -14,16 +14,19 @@
         = link_to blog do
           .blog-box
             .blog-image
-              %td= image_tag blog.image.url, crop:("120x120+0+0"), class:'img-fluid' 
+              %td= image_tag blog.image.url, class:'img-fluid' 
             .blog-nav
-              %td= blog.title
-              %td= blog.created_at.strftime("%Y年%m月%d日")
-              %td= render 'blogs/tag_list', tag_list: blog.tag_list
+              .blog-title
+                %td= blog.title
+              .blog-time
+                %td= blog.created_at.strftime("%Y年%m月%d日")
+              .blog-tags
+                %td= render 'blogs/tag_list', tag_list: blog.tag_list
 
   %br
 
-  .blog-new-btn
-    = link_to '新規記事作成', new_blog_path, class: "new-post"
+  -# .blog-new-btn
+  -#   = link_to '新規記事作成', new_blog_path, class: "new-post"
 
 .side-contents
 

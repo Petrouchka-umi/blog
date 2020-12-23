@@ -3,19 +3,27 @@
 %p#notice= notice
 
 .wrapper
-  %p
-    %b Title:
-    = @blog.title
-    = @blog.created_at.strftime("%Y年%m月%d日")
-    = render 'blogs/tag_list', tag_list: @blog.tag_list
-    = @blog.body
+  .blog-show
+    .blog-title
+      = @blog.title
+    .blog-info
+      .blog-time
+        = @blog.created_at.strftime("%Y年%m月%d日")
+      .blog-tags
+        = render 'blogs/tag_list', tag_list: @blog.tag_list
+    .blog-body
+      = @blog.body
 
   .nav-box
-    .edit-box
-      = link_to '編集', edit_blog_path(@blog)
-
-      = link_to '削除', @blog, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }
-
-      = link_to '戻る', blogs_path, class:"back"
+    - if current_user
+      .edit
+        = link_to '編集', edit_blog_path(@blog)
+      .destory
+        = link_to '削除', @blog, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }
+      .back
+        = link_to '戻る', blogs_path, class:"back"
+    - else
+      .back
+        = link_to '戻る', blogs_path, class:"back"
 
   = render "footer"

@@ -4,7 +4,8 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    # @blogs = Blog.includes(:user).order("created_at DESC")
+    @blogs = Blog.all.order("created_at DESC")
 
     if params[:tag_name]
       @blogs = Blog.tagged_with("#{params[:tag_name]}")
@@ -73,6 +74,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :image, :tag_list)
+      params.require(:blog).permit(:title, :body, :image, :tag_list).merge(user_id: current_user.admin)
     end
 end
