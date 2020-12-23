@@ -13,10 +13,9 @@
       .blog-content
         = link_to blog do
           .blog-box
-            = image_tag blog.image.url, crop:("120x120+0+0"), class:'img-fluid' 
+            %td= image_tag blog.image.url, crop:("120x120+0+0"), class:'img-fluid' 
             %td= blog.title
             %td= blog.created_at.strftime("%Y年%m月%d日")
-            -# %td= image_tag @blog.image.variant(resize_to_fill:[800,600]).processed, crop:("120x120+0+0"), class:'img-fluid' if bolg.image.present?
             %td= render 'blogs/tag_list', tag_list: blog.tag_list
 
   %br

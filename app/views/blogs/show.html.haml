@@ -7,6 +7,7 @@
     %b Title:
     = @blog.title
     = @blog.created_at.strftime("%Y年%m月%d日")
+    = render 'blogs/tag_list', tag_list: @blog.tag_list
     = @blog.body
 
   .nav-box
