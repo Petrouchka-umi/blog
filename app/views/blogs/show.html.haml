@@ -4,13 +4,18 @@
 
 .wrapper
   .blog-show
-    .blog-title
-      = @blog.title
     .blog-info
       .blog-time
         = @blog.created_at.strftime("%Y年%m月%d日")
+      .blog-category-show
+        カテゴリー：
+        = @blog.category.name 
+        -# = @parent.name 
       .blog-tags
+        タグ：
         = render 'blogs/tag_list', tag_list: @blog.tag_list
+    .blog-title
+      = @blog.title
     .blog-body
       = @blog.body
 

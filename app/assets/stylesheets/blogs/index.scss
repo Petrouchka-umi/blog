@@ -2,7 +2,7 @@
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 70vw;
+  width: 65vw;
   .main-content {
     display: flex;
     text-align: left;
@@ -29,6 +29,7 @@
 }
 
 .blog-body {
+  margin: 10px 0;
   height: 500px;
   overflow: scroll;
 }
@@ -37,16 +38,23 @@
   border: 2px solid lightgray;
   border-radius: 20px;
   display: flex;
+  font-family: "Cormorant Garamond", serif;
   .blog-image {
     margin: 5px 10px;
   }
   .blog-nav {
     margin: 5px 15px;
-  }
-  .blog-time {
-    margin: 10px 0;
-  }
-  .blog-tags {
-    margin: 10px 0;
+    .blog-time {
+      margin: 10px 0;
+      font-size: 15px;
+    }
+    .blog-title {
+      font-size: 22px;
+      padding: 8px 0;
+      font-weight: bold;
+    }
+    .blog-tags {
+      margin-top: 8px;
+    }
   }
 }

@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :restaurants, only: [:index, :new, :create, :show,  :edit, :destroy]
   end
+
+  resources :categories, only: [:index] do
+    member do
+      get 'parent'
+    end
+  end
 end

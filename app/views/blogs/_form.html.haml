@@ -10,22 +10,26 @@
     .blog-title
       = f.label :title, "タイトル"
       = f.text_field :title, class: "blog-title_form", placeholder: "タイトル"
+    .blog-category
+      = f.label :category_id, "カテゴリー"
+      = f.collection_select :category_id, Category.roots, :id, :name, {include_blank:"----"}, class:'category'
     .tag-box
       .tag-form
         = f.label :tag_list, "タグ追加"
         = f.text_field :tag_list, value: @blog.tag_list.join(','), class: "tag-list_form", placeholder: "タグ #〇〇"
       .tag-lists
-        %ul.tag-list
-          %li.tag #自己啓発
-          %li.tag #お金
-          %li.tag #プログラミング
-          %li.tag #医療
-          %li.tag #グルメsx
+        -# %ul.tag-list
+        -#   %li.tag #自己啓発
+        -#   %li.tag #マネー
+        -#   %li.tag #プログラミング
+        -#   %li.tag #健康
+        -#   %li.tag #グルメ
     .images
       = f.label :image, "記事トップ画像"
       = f.file_field :image, accept: "image/png, image/jpeg, image/gif"
 
   = f.rich_text_area :body, class:"blog-body"
+  
   .actions
     - if @blog.persisted?
       = f.submit '更新する', class: "submit"

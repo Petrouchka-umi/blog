@@ -72,3 +72,6 @@ gem 'acts-as-taggable-on', '6.5.0'
 gem 'mini_magick'
 
 gem 'carrierwave'
+
+gem 'ancestry'
+

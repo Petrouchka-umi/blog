@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 header {
-  border-bottom: 2px solid lightgray;
   .header-box {
+    border-bottom: 2px solid lightgray;
     display: flex;
     justify-content: space-around;
     .nav {
@@ -49,4 +49,8 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }

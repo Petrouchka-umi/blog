@@ -15,6 +15,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    # @parent = @blog.category
   end
 
   # GET /blogs/new
@@ -74,6 +75,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :image, :tag_list).merge(user_id: current_user.admin)
+      params.require(:blog).permit(:title, :body, :image, :category_id, :tag_list).merge(user_id: current_user.admin)
     end
 end

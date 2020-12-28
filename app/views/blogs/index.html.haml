@@ -1,13 +1,6 @@
 = render "header"
 
 .wrapper
-  %table
-    %thead
-      %tr
-        %h2 記事一覧
-        %th
-        %th
-        %th
   .main-content
     - @blogs.each do |blog|
       .blog-content
@@ -16,18 +9,18 @@
             .blog-image
               %td= image_tag blog.image.url, class:'img-fluid' 
             .blog-nav
-              .blog-title
-                %td= blog.title
               .blog-time
                 %td= blog.created_at.strftime("%Y年%m月%d日")
+              .blog-title
+                %td= blog.title
+              .blog-category
+                カテゴリー：
+                = blog.category.name 
               .blog-tags
                 %td= render 'blogs/tag_list', tag_list: blog.tag_list
 
-  %br
-
-  -# .blog-new-btn
-  -#   = link_to '新規記事作成', new_blog_path, class: "new-post"
-
-.side-contents
+  .side-contents
+    = render 'side'
+  -# 部分テンプレート呼び出し
 
 = render "footer"

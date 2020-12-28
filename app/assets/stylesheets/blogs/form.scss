@@ -1,37 +1,53 @@
+.form-field {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .blog-title {
   margin: 10px 0;
 }
 
 .blog-title_form {
-  width: 300px;
-  height: 20px;
+  width: 500px;
+  height: 25px;
+}
+
+.blog-category {
+  margin: 20px 0;
+  .category {
+    width: 508px;
+    height: 32px;
+  }
 }
 
 .tag-box {
-  margin-top: 10px;
+  margin: 20px 0;
   .tag-list_form {
-    width: 300px;
-    height: 20px;
+    width: 500px;
+    height: 25px;
   }
   .tag-list {
     display: flex;
     text-decoration: none;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     .tag {
       text-decoration: none;
-      margin: 0 15px; 
+      margin-right:  30px; 
       font-size: 17px;
     }
   }
 }
 
+.images {
+  margin: 10px 0;
+}
+
 .actions {
-  margin-top: 10px;
-  // margin-left: auto;
-  // margin-right: auto;
   width: 50px;
+  padding-top: 10px;
   .submit {
-    border: 2px solid skyblue;
+    border: 1px solid skyblue;
     // background-color: paleturquoise;
     font-size: 20px;
     border-radius: 10px;
