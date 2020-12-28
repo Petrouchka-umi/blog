@@ -16,9 +16,16 @@
 
   .header-contents
     .header-image
-      
+      = image_tag 'IMG_6258.png', alt: 'header-img', class: 'header-img'
     .header-lists
-      %ul
-        %li
-
-    -# カテゴリーや写真挿入
+      %ul.header-list
+        %li 
+          = link_to "ホーム", root_path
+        %li 
+          = link_to "プロフィール", root_path
+        %li 
+          = link_to "カテゴリ一覧", root_path
+        %li 
+          = link_to "（仮）", root_path
+        %li 
+          = link_to "お問い合わせ", root_path

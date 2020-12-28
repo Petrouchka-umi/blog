@@ -3,14 +3,18 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'blogs#index'
   
-  resources :blogs
-
+  resources :blogs do
+    collection do
+      get :search
+    end
+  end
+  
   resources :restaurants, only: [:index, :show] 
   namespace :admin do
     resources :restaurants, only: [:index, :new, :create, :show,  :edit, :destroy]
   end
 
-  resources :categories, only: [:index] do
+  resources :categories, only: :index do
     member do
       get 'parent'
     end

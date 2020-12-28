@@ -1,9 +1,13 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  background-color: snow;
+  // background-color: #F7F7F7;
+}
+
 header {
   .header-box {
-    border-bottom: 2px solid lightgray;
     display: flex;
     justify-content: space-around;
     .nav {
@@ -23,14 +27,34 @@ header {
 
 h1 {
   font-family: "Cormorant Garamond", serif;
-  // color: skyblue;
-  color: #FFCC33; 
+  color: deepskyblue;
   font-size: 35px;
   letter-spacing: .1em;
 }
 
 h2 {
   font-size: 25px;
+}
+
+.header-contents {
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 50px;
+  .header-img {
+    width: 100vw;
+    height: 150px;
+    object-fit: cover;
+    // background-image:url("IMG_6258.png");
+    margin-left: -8px;
+  }
+  
+  .header-list {
+    display: flex;
+    justify-content: space-around;
+    li {
+      font-size: 18px;
+      
+    }
+  }
 }
 
 footer {
@@ -42,8 +66,7 @@ footer {
     margin: 20px 0;
   }
   .footer_title {
-    color: skyblue;
-    // color: snow;
+    color: deepskyblue;
   }
 }
 
