@@ -1,0 +1,25 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  color:grey;
+}
+
+.content-box {
+  display: flex;
+  .profile-img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    object-position: 100% 100%;
+    border-radius: 60%;
+    border: 2px solid lightgrey;
+  }
+  .text-box {
+    margin: 10px 20px;
+    
+  }
+}
+          

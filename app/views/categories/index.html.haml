@@ -1,0 +1,27 @@
+= render "blogs/header"
+
+.wrapper
+  .category-contents
+    - @parents.each do |parent|
+      .category-parent
+        -# = parent.name 
+        = link_to "#{parent.name}", parent_category_path(parent), class: "parent"
+
+        -# .parent-blog
+        -#   - parent.blogs.each do |blog|
+        -#     .blog-content
+        -#       = link_to blog do
+        -#         .blog-box
+        -#           .blog-image
+        -#             %td= image_tag blog.image.url, class:'img-fluid' 
+        -#           .blog-nav
+        -#             .blog-time
+        -#               %td= blog.created_at.strftime("%Y年%m月%d日")
+        -#             .blog-title
+        -#               %td= blog.title
+        -#             .blog-category
+        -#               = blog.category.name 
+        -#             .blog-tags
+        -#               %td= render 'blogs/tag_list', tag_list: blog.tag_list
+
+= render "blogs/footer"

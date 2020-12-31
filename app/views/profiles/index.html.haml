@@ -1,0 +1,67 @@
+= render "blogs/header"
+
+.wrapper
+  .profile-list
+    .umi-box
+      %h2 管理者：umi
+      .profile-content
+        .content-box
+          .img-box
+            -# %img.profile-img{:alt => "画像", :src => "AA2E0C32-7414-4A75-B541-FAB9757D9190_1_105_c.jpeg"}/
+            = image_tag 'IMG_1553.jpeg', alt: 'umi画像', class: 'profile-img'
+          .text-box
+            %p
+              2019年4月から作業療法士として急性期病院で2年間勤務。しかし、仕事に対するやりがい・楽しさを見出せず転職を決意。
+              人生はリスクを背負ってこそ良き道が拓けると信じ以前から興味のあったプログラミングに思い切って挑戦！
+            %p 趣味：スノボー・ランニング・読書・旅行
+      .content
+        .title works
+        .content-box-works
+          .img-box
+            / <img class="img" src="app_new.png" alt="画像">
+            -# %video.img{:autoplay => "", :controls => "", :muted => "", :playsinline => ""}
+            -#   %source{:src => "chart.mp4"}
+          .text-box-works
+            %p.app
+              アプリ名：
+              %a.likenote{:href => "https://like-note.herokuapp.com/"}
+                Like-Note
+            %p
+            %p 今日あったポジティブな出来事３つとその日の気分を記録する日記のようなアプリ。
+            %p 気分はフェスマークで表現し、日付別に気分の波をグラフとして見ることも可能。
+            %p 精神科医で作家の樺沢紫苑先生が提唱しているポジティブ三行日記のアプリ版です。
+            %a.app-github{:href => "https://github.com/Petrouchka-umi/like-note"} Github
+        .content-box-works
+          .img-box
+            %img.img{:alt => "画像", :src => "Book-Talk.png"}/
+          .text-box-works
+            %p.app
+              アプリ名：
+              %sapn.booktalk BookTalk
+            %p 読書でのインプットを読んだままにしないための本専用アウトプットツール。
+            %p 読書で気になった箇所や重要な箇所をメモのように残しておくことができます。メモは他人とお互いに共有でき、メモに対してコメントを残すこともできます。
+            %a.app-github{:href => "https://github.com/Petrouchka-umi/book-talk"} Github
+        .content-box-works
+          .img-box
+            %img.img{:alt => "画像", :src => "furima.jpg"}/
+          .text-box-works
+            %p.app
+              アプリ名：
+              %sapn.furima Furima
+              / <a class="furima" href="#">Furima</a>
+            %p メルカリをモデルにアジャイル開発にて、フリマアプリのクローンサイトを作成。
+            %p DB設計・商品出品・カテゴリー機能・商品検索・単体テストなどを担当。
+            %p
+              テックキャンプ休日夜間80期、チームでの制作物です。
+            %a.app-github{:href => "https://github.com/MrChild-MrAdult/fleamarket_sample_80b"} Github
+
+    .wata-box
+      %h2 ライター：wata
+      .profile-content
+        .content-box
+          .img-box
+            = image_tag 'IMG_1355.jpeg', alt: 'wata画像', class: 'profile-img'
+          .text-box
+
+
+= render "blogs/footer"

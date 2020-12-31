@@ -1,4 +1,4 @@
 //= require rails-ujs
 //= require jquery
-//= require_tree ./modules
+//= require_tree ./blogs
 

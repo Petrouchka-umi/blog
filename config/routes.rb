@@ -19,4 +19,7 @@ Rails.application.routes.draw do
       get 'parent'
     end
   end
+
+  resources :profiles, only: :index
+  
 end
