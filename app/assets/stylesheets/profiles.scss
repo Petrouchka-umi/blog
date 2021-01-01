@@ -2,24 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.profile-list {
+  background-color: #fff;
+  border: 2px solid snow;
+  // border: 2px solid lightgrey;
+  border-radius: 20px;
+}
+
 h2 {
   font-family: "Cormorant Garamond", serif;
   color:grey;
 }
 
-.content-box {
+.umi-box {
+  margin: 20px 10px;
+}
+
+.wataru-box {
+  margin: 40px 10px;
+}
+
+.profile-content{
   display: flex;
   .profile-img {
-    height: 180px;
-    width: 180px;
+    height: 170px;
+    width: 170px;
     object-fit: cover;
     object-position: 100% 100%;
     border-radius: 60%;
-    border: 2px solid lightgrey;
+    border: 2px solid skyblue;
   }
   .text-box {
-    margin: 10px 20px;
-    
+    margin: 0 20px;
   }
 }
-          
+
+.output-box {
+  margin: 30px 10px;
+  font-size: 20px;
+}
+
+.portfolio {
+  text-align: center;
+  margin: 30px 0;
+  .portfolio-show {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+  }
+}
