@@ -30,8 +30,7 @@
 
 .blog-body {
   margin: 10px 0;
-  height: 500px;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 .blog-box {
@@ -51,11 +50,15 @@
     }
     .blog-title {
       font-size: 22px;
-      padding: 8px 0;
+      padding: 5px 0;
       font-weight: bold;
+      line-height: 1.3em;
+    }
+    .blog-category {
+      margin: 15px 0;
     }
     .blog-tags {
-      margin-top: 8px;
+      margin-top: 5px;
     }
   }
 }

@@ -10,7 +10,7 @@
     .blog-title
       = f.label :title, "タイトル"
       = f.text_field :title, class: "blog-title_form", placeholder: "タイトル"
-    .blog-category
+    .blog-category-new 
       = f.label :category_id, "カテゴリー"
       = f.collection_select :category_id, Category.roots, :id, :name, {include_blank:"----"}, class:'category'
     .tag-box

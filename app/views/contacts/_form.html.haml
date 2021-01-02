@@ -1,0 +1,22 @@
+= form_for @contact do |f|
+  - if @contact.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@contact.errors.count, "error")} prohibited this contact from being saved:"
+      %ul
+        - @contact.errors.full_messages.each do |message|
+          %li= message
+  .contact-box
+    .contact-field
+      = f.label :name, "名前（必須）"
+      = f.text_field :name, class: "field"
+    .contact-field
+      = f.label :email, "メールアドレス（必須）"
+      = f.text_field :email, class: "field"
+    .contact-field
+      = f.label :title, "題名"
+      = f.text_field :title, class: "field"
+    .contact-field
+      = f.label :content, "メッセージ本文(300文字まで)"
+      = f.text_area :content, class: "text-field "
+    .contact-actions
+      = f.submit '送信', class: "submit"
