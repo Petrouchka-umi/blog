@@ -37842,3 +37842,837 @@ Processing by ContactsController#new as HTML
 Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.4ms | Allocations: 20029)
 
 
+Started GET "/" for ::1 at 2021-01-02 23:41:30 +0900
+  [1m[35m (6.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 1547.3ms | Allocations: 1577833)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (1.8ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 1.9ms | Allocations: 1730)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 1.7ms | Allocations: 1519)
+  Rendered blogs/_footer.html.haml (Duration: 1.3ms | Allocations: 1892)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 1657.4ms | Allocations: 1625198)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1723ms (Views: 1655.4ms | ActiveRecord: 28.5ms | Allocations: 1655257)
+
+
+Started GET "/profiles" for ::1 at 2021-01-02 23:41:39 +0900
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.0ms | Allocations: 1929)
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered profiles/index.html.haml within layouts/application (Duration: 11.8ms | Allocations: 8629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.3ms | Allocations: 26470)
+
+
+Started GET "/categories" for ::1 at 2021-01-02 23:41:46 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.haml within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.6ms | Allocations: 1923)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  ↳ app/views/categories/index.html.haml:5
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered categories/index.html.haml within layouts/application (Duration: 10.8ms | Allocations: 5311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.9ms | Allocations: 23173)
+
+
+Started GET "/contacts/new" for ::1 at 2021-01-02 23:41:48 +0900
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 3.0ms | Allocations: 1919)
+  Rendered contacts/_form.html.haml (Duration: 8.3ms | Allocations: 4978)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered contacts/new.html.haml within layouts/application (Duration: 14.1ms | Allocations: 9571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 44.3ms | ActiveRecord: 6.4ms | Allocations: 32486)
+
+
+Started GET "/categories" for ::1 at 2021-01-02 23:41:50 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 7.9ms | Allocations: 1923)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  ↳ app/views/categories/index.html.haml:5
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered categories/index.html.haml within layouts/application (Duration: 12.9ms | Allocations: 3046)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 1.5ms | Allocations: 20317)
+
+
+Started GET "/categories/1/parent" for ::1 at 2021-01-02 23:41:50 +0900
+Processing by CategoriesController#parent as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:8:in `parent'
+  Rendering categories/parent.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.7ms | Allocations: 1911)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`category_id` = 1[0m
+  ↳ app/views/categories/parent.html.haml:7
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/categories/parent.html.haml:21
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/categories/parent.html.haml:21
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/categories/parent.html.haml:21
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/categories/parent.html.haml:21
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 9)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered categories/parent.html.haml within layouts/application (Duration: 20.3ms | Allocations: 12876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 2.4ms | Allocations: 30890)
+
+
+Started GET "/categories/2/parent" for ::1 at 2021-01-02 23:41:52 +0900
+Processing by CategoriesController#parent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:8:in `parent'
+  Rendering categories/parent.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.3ms | Allocations: 1900)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`category_id` = 2[0m
+  ↳ app/views/categories/parent.html.haml:7
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/categories/parent.html.haml:21
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/categories/parent.html.haml:21
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered categories/parent.html.haml within layouts/application (Duration: 12.9ms | Allocations: 5219)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 1.9ms | Allocations: 23051)
+
+
+Started GET "/categories/3/parent" for ::1 at 2021-01-02 23:41:54 +0900
+Processing by CategoriesController#parent as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:8:in `parent'
+  Rendering categories/parent.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.1ms | Allocations: 1900)
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`category_id` = 3[0m
+  ↳ app/views/categories/parent.html.haml:7
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered categories/parent.html.haml within layouts/application (Duration: 6.5ms | Allocations: 2868)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 2.0ms | Allocations: 20687)
+
+
+Started GET "/blogs/new" for ::1 at 2021-01-02 23:41:57 +0900
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.1ms | Allocations: 1911)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  ↳ app/views/blogs/_form.html.haml:15
+  Rendered blogs/_form.html.haml (Duration: 29.6ms | Allocations: 17822)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/new.html.haml within layouts/application (Duration: 36.6ms | Allocations: 21923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 4.0ms | Allocations: 39212)
+
+
+Started GET "/blogs" for ::1 at 2021-01-02 23:42:00 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 3.5ms | Allocations: 1907)
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 24.9ms | Allocations: 12165)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 3.5ms | Allocations: 29444)
+
+
+Started GET "/" for ::1 at 2021-01-02 23:42:03 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 7.2ms | Allocations: 1900)
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.2ms | Allocations: 12)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 30.5ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 4.3ms | Allocations: 29418)
+
+
+Started GET "/blogs/3" for ::1 at 2021-01-02 23:42:05 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.6ms | Allocations: 1911)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 3 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 6.1ms | Allocations: 1492)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 49.2ms | Allocations: 15731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 3.1ms | Allocations: 33741)
+
+
+Started GET "/blogs/3" for ::1 at 2021-01-02 23:42:14 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 3.5ms | Allocations: 1906)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 3 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.6ms | Allocations: 1361)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 13.7ms | Allocations: 7996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 1.8ms | Allocations: 25827)
+
+
+Started GET "/" for ::1 at 2021-01-02 23:42:18 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 6.1ms | Allocations: 1901)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 25.4ms | Allocations: 12155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 3.4ms | Allocations: 29406)
+
+
+Started GET "/blogs/2" for ::1 at 2021-01-02 23:42:19 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.1ms | Allocations: 1900)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 9)
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 2 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 0.4ms | Allocations: 258)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 16.2ms | Allocations: 6708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 28.2ms | ActiveRecord: 3.2ms | Allocations: 24527)
+
+
+Started GET "/blogs" for ::1 at 2021-01-02 23:42:22 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 6.4ms | Allocations: 1900)
+  [1m[36mBlog Load (3.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 28.7ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 34.7ms | ActiveRecord: 7.6ms | Allocations: 29399)
+
+
+Started GET "/blogs/1" for ::1 at 2021-01-02 23:42:23 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.0ms | Allocations: 1900)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 1 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.3ms | Allocations: 825)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 16.4ms | Allocations: 7430)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.4ms | ActiveRecord: 2.2ms | Allocations: 25265)
+
+
+Started GET "/blogs/2" for ::1 at 2021-01-02 23:42:34 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 6.4ms | Allocations: 1900)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 9)
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 2 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 0.6ms | Allocations: 256)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 35.4ms | Allocations: 6708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 46.7ms | ActiveRecord: 2.7ms | Allocations: 24550)
+
+
+Started GET "/blogs/3" for ::1 at 2021-01-02 23:42:36 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 5.6ms | Allocations: 1900)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 3 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 3.2ms | Allocations: 1361)
+  Rendered blogs/_footer.html.haml (Duration: 0.2ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 22.4ms | Allocations: 7988)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 2.6ms | Allocations: 25815)
+
+
+Started GET "/blogs/1" for ::1 at 2021-01-02 23:42:38 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 6.3ms | Allocations: 1900)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 1 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.9ms | Allocations: 823)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 20.9ms | Allocations: 7426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 3.1ms | Allocations: 25259)
+
+
+Started GET "/blogs/1/edit" for ::1 at 2021-01-02 23:42:40 +0900
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/edit.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.3ms | Allocations: 1911)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  ↳ app/views/blogs/_form.html.haml:15
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/_form.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/_form.html.haml:19
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 1 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/_form.html.haml:31
+  Rendered blogs/_form.html.haml (Duration: 12.8ms | Allocations: 5628)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/edit.html.haml within layouts/application (Duration: 20.8ms | Allocations: 9733)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 2.2ms | Allocations: 27596)
+
+
+Started PATCH "/blogs/1" for ::1 at 2021-01-02 23:42:56 +0900
+Processing by BlogsController#update as HTML
+  Parameters: {"authenticity_token"=>"ZVl5Zgjl5huaDCHyBqiEarsIpEWIa9EBUC8954Aj7/Py3MbFxUuQFdBIXcPtH9NHpQMIiGhyCHCDkAuZ1iSFig==", "blog"=>{"title"=>"ブログ始めました！", "category_id"=>"1", "tag_list"=>"#自己啓発", "body"=>"<h1>ブログ開設！！</h1><div>こんにちは、駆け出しエンジニアのumiです。<br><br>人生や仕事、健康などいろいろなジャンルで有益な情報を発信していきます！<br><br></div><div>個人的な備忘録になることが多いかもしれませんが、誰かの役に立てば幸いです！</div><ol><li>これから発信するジャンル</li><li><br></li><li>1.自己啓発、人生について</li><li>2.プログラミングについて</li><li>3.お金について</li><li><br></li></ol><div>上記について発信することが多いと思います！</div><div><br>これから、どんどん発信しますので、ぜひご覧ください。<br><br>では、また！</div>"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:78:in `blog_params'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 1 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.1ms | Allocations: 830)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.0ms | Allocations: 871)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.2ms | Allocations: 823)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.4ms | Allocations: 871)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 19.6ms | Allocations: 823)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.1ms | Allocations: 871)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 0.9ms | Allocations: 823)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.0ms | Allocations: 871)
+  [1m[36mActionText::RichText Update (2.1ms)[0m  [1m[33mUPDATE `action_text_rich_texts` SET `action_text_rich_texts`.`body` = '<h1>ブログ開設！！</h1><div>こんにちは、駆け出しエンジニアのumiです。<br><br>人生や仕事、健康などいろいろなジャンルで有益な情報を発信していきます！<br><br></div><div>個人的な備忘録になることが多いかもしれませんが、誰かの役に立てば幸いです！</div><ol><li>これから発信するジャンル</li><li><br></li><li>1.自己啓発、人生について</li><li>2.プログラミングについて</li><li>3.お金について</li><li><br></li></ol><div>上記について発信することが多いと思います！</div><div><br>これから、どんどん発信しますので、ぜひご覧ください。<br><br>では、また！</div>', `action_text_rich_texts`.`updated_at` = '2021-01-02 14:42:56.354824' WHERE `action_text_rich_texts`.`id` = 1[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.3ms | Allocations: 823)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.2ms | Allocations: 871)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.5ms | Allocations: 823)
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.3ms | Allocations: 871)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'ActionText::RichText' AND `active_storage_attachments`.`name` = 'embeds'[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE (LOWER(name) = LOWER('#自己啓発'))[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mCACHE ActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE (LOWER(name) = LOWER('#自己啓発'))[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mCACHE ActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[36mBlog Update (0.3ms)[0m  [1m[33mUPDATE `blogs` SET `blogs`.`updated_at` = '2021-01-02 14:42:56.371968' WHERE `blogs`.`id` = 1[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:50:in `block in update'
+Redirected to http://localhost:3000/blogs/1
+Completed 302 Found in 97ms (ActiveRecord: 9.5ms | Allocations: 40252)
+
+
+Started GET "/blogs/1" for ::1 at 2021-01-02 23:42:56 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 2.5ms | Allocations: 1901)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 1 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 1.1ms | Allocations: 871)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 11.6ms | Allocations: 7477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 1.6ms | Allocations: 25338)
+
+
+Started GET "/blogs" for ::1 at 2021-01-02 23:43:02 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.0ms | Allocations: 1900)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 28.0ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 4.2ms | Allocations: 29407)
+
+
+Started GET "/profiles" for ::1 at 2021-01-02 23:43:04 +0900
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 5.6ms | Allocations: 1911)
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered profiles/index.html.haml within layouts/application (Duration: 8.6ms | Allocations: 3121)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 20332)
+
+
+Started GET "/" for ::1 at 2021-01-02 23:43:06 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 3.5ms | Allocations: 1900)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 25.5ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 3.6ms | Allocations: 29407)
+
+
+Started GET "/blogs/3" for ::1 at 2021-01-02 23:43:06 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.6ms | Allocations: 1900)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 3 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 2.1ms | Allocations: 1359)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 17.4ms | Allocations: 7985)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 2.2ms | Allocations: 25810)
+
+
+Started GET "/blogs/3" for ::1 at 2021-01-02 23:44:49 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/blogs_controller.rb:73:in `set_blog'
+  Rendering blogs/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.1ms | Allocations: 1900)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:12
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/show.html.haml:16
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/show.html.haml:16
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT `action_text_rich_texts`.* FROM `action_text_rich_texts` WHERE `action_text_rich_texts`.`record_id` = 3 AND `action_text_rich_texts`.`record_type` = 'Blog' AND `action_text_rich_texts`.`name` = 'body' LIMIT 1[0m
+  ↳ app/views/blogs/show.html.haml:20
+  Rendered /Users/sakaotakukai/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 2.0ms | Allocations: 1359)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/show.html.haml within layouts/application (Duration: 14.4ms | Allocations: 7985)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 132ms (Views: 127.8ms | ActiveRecord: 1.7ms | Allocations: 58903)
+
+
+Started GET "/" for ::1 at 2021-01-02 23:45:01 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 7.1ms | Allocations: 1900)
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (1.8ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.6ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 38.4ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 78.1ms | ActiveRecord: 4.5ms | Allocations: 29498)
+
+
+Started GET "/profiles" for ::1 at 2021-01-02 23:45:03 +0900
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 5.1ms | Allocations: 1901)
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered profiles/index.html.haml within layouts/application (Duration: 9.1ms | Allocations: 3111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.7ms | Allocations: 20324)
+
+
+Started GET "/categories" for ::1 at 2021-01-02 23:45:04 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 3.4ms | Allocations: 1911)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  ↳ app/views/categories/index.html.haml:5
+  Rendered blogs/_footer.html.haml (Duration: 0.1ms | Allocations: 10)
+  Rendered categories/index.html.haml within layouts/application (Duration: 6.6ms | Allocations: 3033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.6ms | Allocations: 20300)
+
+
+Started GET "/contacts/new" for ::1 at 2021-01-02 23:45:06 +0900
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.4ms | Allocations: 1911)
+  Rendered contacts/_form.html.haml (Duration: 1.5ms | Allocations: 651)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered contacts/new.html.haml within layouts/application (Duration: 6.7ms | Allocations: 2797)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.4ms | Allocations: 20019)
+
+
+Started GET "/" for ::1 at 2021-01-02 23:45:11 +0900
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 4.1ms | Allocations: 1900)
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT `blogs`.* FROM `blogs` ORDER BY created_at DESC[0m
+  ↳ app/views/blogs/index.html.haml:5
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.haml:17
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog'[0m
+  ↳ app/views/blogs/index.html.haml:19
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Blog' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/blogs/index.html.haml:19
+  Rendered blogs/_tag_list.html.haml (Duration: 0.1ms | Allocations: 12)
+  Rendered blogs/_side.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/_footer.html.haml (Duration: 0.0ms | Allocations: 10)
+  Rendered blogs/index.html.haml within layouts/application (Duration: 28.8ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 4.9ms | Allocations: 29421)
+
+
