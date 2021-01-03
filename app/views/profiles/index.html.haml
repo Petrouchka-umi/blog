@@ -7,7 +7,7 @@
       .profile-content
         .img-box
           -# %img.profile-img{:alt => "画像", :src => "AA2E0C32-7414-4A75-B541-FAB9757D9190_1_105_c.jpeg"}/
-          = image_tag 'IMG_1553.jpeg', alt: 'umi画像', class: 'profile-img'
+          = image_tag asset_path('IMG_1553.jpeg'), alt: 'umi画像', class: 'profile-img'
         .text-box
           %p こんにちは、駆け出しエンジニアのumiです。
           %p 未経験からエンジニアに転職しました！
@@ -22,7 +22,7 @@
       %h2 ライター：wataru
       .profile-content
         .img-box
-          = image_tag 'IMG_1355.jpeg', alt: 'wata画像', class: 'profile-img'
+          = image_tag asset_path('IMG_1355.jpeg'), alt: 'wata画像', class: 'profile-img'
         .text-box
           %p こんにちは、作業療法士のwataruです。
           %p 

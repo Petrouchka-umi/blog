@@ -38676,3 +38676,17 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 4.9ms | Allocations: 29421)
 
 
+Started GET "/profiles" for ::1 at 2021-01-03 21:13:39 +0900
+  [1m[35m (14.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.haml within layouts/application
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/blogs/_header.html.haml:7
+  Rendered blogs/_header.html.haml (Duration: 1603.3ms | Allocations: 1578432)
+  Rendered blogs/_footer.html.haml (Duration: 1.7ms | Allocations: 1904)
+  Rendered profiles/index.html.haml within layouts/application (Duration: 1624.1ms | Allocations: 1588962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1666ms (Views: 1642.8ms | ActiveRecord: 13.9ms | Allocations: 1610448)
+
+
