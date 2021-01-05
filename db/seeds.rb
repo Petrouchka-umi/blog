@@ -9,7 +9,7 @@ require './db/seeds/category.rb'
 
 User.create!(
   name: 'umi',
-  email: 'qhn.xt6@icloud.com',
-  password: 'umi0207',
+  email: ENV['email01'],
+  password: ENV['password01'],
   admin: true
 )

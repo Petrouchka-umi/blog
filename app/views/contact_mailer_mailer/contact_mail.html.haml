@@ -4,6 +4,14 @@
   %h3 お問い合わせ内容の確認
 
   .contact-check
-    = @contact.contact
-
+    %p
+      お名前
+      = @conca.name
+    %p
+      題名
+      = @concat.title
+    %p
+      メッセージ本文
+      = @contact.contact
+      
 = render "blogs/footer"

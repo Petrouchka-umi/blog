@@ -80,3 +80,6 @@ gem 'carrierwave'
 
 gem 'ancestry'
 
+# 環境変数設定
+gem 'dotenv-rails'
+

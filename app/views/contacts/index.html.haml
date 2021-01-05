@@ -23,6 +23,16 @@
           %td= link_to 'Edit', edit_contact_path(contact)
           %td= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }
 
+        -# .contact-check
+        -#     %p
+        -#       お名前
+        -#       = @conca.name
+        -#     %p
+        -#       題名
+        -#       = @concat.title
+        -#     %p
+        -#       メッセージ本文
+        -#       = @contact.contact
 %br
 
 = link_to 'New Contact', new_contact_path
