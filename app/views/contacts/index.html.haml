@@ -2,14 +2,14 @@
 
 .wrapper
 
-  %h1 Listing contacts
+  %h2 お問い合わせ一覧
   %table
     %thead
       %tr
-        %th Name
-        %th Email
-        %th Content
-        %th
+        %th 名前
+        %th メール
+        %th 題名
+        %th 
         %th
         %th
 
@@ -18,23 +18,14 @@
         %tr
           %td= contact.name
           %td= contact.email
-          %td= contact.content
-          %td= link_to 'Show', contact
-          %td= link_to 'Edit', edit_contact_path(contact)
-          %td= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= contact.title
+          -# %td= contact.content
+          %td= link_to '詳細', contact
+          %td= link_to '編集', edit_contact_path(contact)
+          %td= link_to '削除', contact, method: :delete, data: { confirm: 'Are you sure?' }
 
-        -# .contact-check
-        -#     %p
-        -#       お名前
-        -#       = @conca.name
-        -#     %p
-        -#       題名
-        -#       = @concat.title
-        -#     %p
-        -#       メッセージ本文
-        -#       = @contact.contact
 %br
 
-= link_to 'New Contact', new_contact_path
+-# = link_to 'New Contact', new_contact_path
 
 = render "blogs/footer"

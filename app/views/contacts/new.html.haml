@@ -1,11 +1,15 @@
 = render "blogs/header"
 
 .wrapper
+  %p#notice= notice
   .contact-box
     %h2 お問い合わせ
     .contact-form
       = render 'form'
 
+  - if current_user
+    .contact-box
+      = link_to "お問い合わせ一覧へ", contacts_path
 -# = link_to 'Back', contacts_path
 
 = render "blogs/footer"

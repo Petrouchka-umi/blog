@@ -1,15 +1,27 @@
+= render "blogs/header"
+
 %p#notice= notice
 
-%p
-  %b Name:
-  = @contact.name
-%p
-  %b Email:
-  = @contact.email
-%p
-  %b Content:
-  = @contact.content
+.wrapper
+  .contact-box
+    %p
+      %b 名前:
+      = @contact.name
+    %p
+      %b メール:
+      = @contact.email
+    %p
+      %b 題名:
+      = @contact.title
+    %p
+      %b メッセージ本文:
+      = @contact.content
 
-= link_to 'Edit', edit_contact_path(@contact)
-\|
-= link_to 'Back', contacts_path
+.rooting-info
+  = link_to '編集', edit_contact_path(@contact)
+  \|
+  = link_to '戻る', contacts_path
+  \|
+  = link_to 'ホームへ', root_path
+
+= render "blogs/footer"

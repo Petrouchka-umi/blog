@@ -1,7 +1,14 @@
-%h1 Editing contact
+= render "blogs/header"
 
-= render 'form'
+.wrapper
+  .contact-box
+    %h2 お問い合わせ編集画面
+    .contact-form
+      = render 'form'
 
-= link_to 'Show', @contact
-\|
-= link_to 'Back', contacts_path
+.rooting-info
+  = link_to '詳細', @contact
+  \|
+  = link_to '戻る', contacts_path
+
+= render "blogs/footer"

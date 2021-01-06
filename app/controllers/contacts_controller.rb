@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except:  [:new, :create,]
 
   # GET /contacts
   # GET /contacts.json
@@ -11,25 +12,25 @@ class ContactsController < ApplicationController
   # GET /contacts/1.json
   def show
   end
-
+  
   # GET /contacts/new
   def new
     @contact = Contact.new
   end
-
+  
   # GET /contacts/1/edit
   def edit
   end
-
+  
   # POST /contacts
   # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
-
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'お問い合わせ内容が送信されました' }
-        format.json { render :show, status: :created, location: @contact }
+        ContactMailer.contact_mail(@contact).deliver_now
+        format.html { redirect_to new_contact_path, notice: 'お問い合わせ内容が送信されました' }
+        format.json { render :new, status: :created, location: @contact }
       else
         format.html { render :new }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
@@ -56,7 +57,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact.destroy
     respond_to do |format|
-      format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
+      format.html { redirect_to contacts_url, notice: 'お問い合わせ内容を削除しました' }
       format.json { head :no_content }
     end
   end
@@ -70,5 +71,11 @@ class ContactsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def contact_params
       params.require(:contact).permit(:name, :email, :title, :content)
+    end
+
+    def move_to_index
+      unless user_signed_in?
+        redirect_to action: :new
+      end
     end
 end

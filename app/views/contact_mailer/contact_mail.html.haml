@@ -1,17 +1,13 @@
-= render "blogs/header"
-
 .wrapper
   %h3 お問い合わせ内容の確認
 
   .contact-check
     %p
       お名前
-      = @conca.name
+      = @contact.name
     %p
       題名
-      = @concat.title
+      = @contact.title
     %p
       メッセージ本文
-      = @contact.contact
-      
-= render "blogs/footer"
+      = @contact.content
