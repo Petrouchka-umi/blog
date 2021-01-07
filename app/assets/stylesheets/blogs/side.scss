@@ -1,0 +1,17 @@
+.side-contents {
+  margin: 0 20px;
+  margin-top: 20px;
+  width: calc(100vw - 75vw);
+  background-color: whitesmoke;
+  .search-box {
+    height: 200px;
+    background-color: lightsteelblue;
+  }
+  .profile-box {
+    margin: 20px 0;
+    height: 400px;
+    background-color: lightslategray;
+  }
+  
+
+}

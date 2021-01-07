@@ -18,6 +18,8 @@
       = @blog.title
     .blog-body
       = @blog.body
+    .blog-user
+      = @blog.user.name
 
   .nav-box
     - if current_user

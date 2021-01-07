@@ -9,6 +9,11 @@
 // <action-text-attachment> element we wrap around attachments. Otherwise,
 // images in galleries will be squished by the max-width: 33%; rule.
 .trix-content {
+  blockquote {
+    border: 0 solid skyblue ;
+    border-left-width: 0.2em;
+    font-size: 22px;
+  }
   .attachment-gallery {
     > action-text-attachment,
     > .attachment {
@@ -32,5 +37,9 @@
       padding: 0 !important;
       max-width: 100% !important;
     }
+  }
+  pre {
+    font-size: 17px;
+    font-family: "Cormorant Garamond", serif;
   }
 }

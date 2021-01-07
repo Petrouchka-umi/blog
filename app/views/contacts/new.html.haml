@@ -7,9 +7,12 @@
     .contact-form
       = render 'form'
 
-  - if current_user
-    .contact-box
-      = link_to "お問い合わせ一覧へ", contacts_path
--# = link_to 'Back', contacts_path
+  -# = render 'blogs/side'
+
+- if current_user
+  .contact-box
+    = link_to "お問い合わせ一覧へ", contacts_path
+  -# = link_to 'Back', contacts_path
+
 
 = render "blogs/footer"

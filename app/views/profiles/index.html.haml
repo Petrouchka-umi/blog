@@ -23,12 +23,17 @@
         .img-box
           = image_tag asset_path('IMG_1355.jpeg'), alt: 'wata画像', class: 'profile-img'
         .text-box
-          %p こんにちは、作業療法士のwataruです。
-          %p 
-          %p
+          %p こんにちは、wataruです。
+          %p 千葉県出身の23歳。現在は、作業療法士としてリハビリに従事しています。
+          %p 管理者のumiと共にブログに挑戦！
+      .text-body
+        %p 現在は会社員として勤務していますが、ゆくゆくは会社に依存せず生きていけるようFIREを目指しいます。
+        %p FIREって何？と思う方は、ぜひ記事をご覧下さい！
       .output-box
       %p 発信ジャンル：自己啓発・マネー・グルメ・健康・趣味
-    
+      %p 趣味：ドライブ・外食・読書
 
+
+  -# = render 'blogs/side'
 
 = render "blogs/footer"

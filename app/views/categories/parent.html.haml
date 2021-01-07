@@ -1,8 +1,8 @@
 = render "blogs/header"
 
+.parent-name
+  = @category
 .wrapper
-  .parent-name
-    = @category
   .main-content
     - @parent.each do |blog|
       .blog-content
@@ -24,4 +24,6 @@
     .pagenate
       = paginate(@parent)
 
+  -# = render 'blogs/side'
+  
 = render "blogs/footer"
