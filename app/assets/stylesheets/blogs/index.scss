@@ -39,6 +39,7 @@
   border-radius: 20px;
   display: flex;
   font-family: "Cormorant Garamond", serif;
+  position: relative;
   .blog-image {
     margin: 5px 10px;
   }
@@ -59,6 +60,13 @@
     }
     .blog-tags {
       margin-top: 5px;
+    }
+    .blog-user {
+      color: deepskyblue;
+      font-size: 20px;
+      position: absolute;
+      right: 25px;
+      bottom: 15px;
     }
   }
 }

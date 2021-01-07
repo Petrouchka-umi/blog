@@ -2,9 +2,9 @@
 
 .wrapper
   .parent-name
-    = @category.name
+    = @category
   .main-content
-    - @category.blogs.each do |blog|
+    - @parent.each do |blog|
       .blog-content
         = link_to blog do
           .blog-box
@@ -19,5 +19,9 @@
                 = blog.category.name 
               .blog-tags
                 %td= render 'blogs/tag_list', tag_list: blog.tag_list
+              .blog-user
+                = blog.user.name
+    .pagenate
+      = paginate(@parent)
 
 = render "blogs/footer"

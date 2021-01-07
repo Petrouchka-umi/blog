@@ -3,7 +3,8 @@ class Blog < ApplicationRecord
   acts_as_taggable 
   mount_uploader :image, ImageUploader
   belongs_to :category, dependent: :destroy
-  
+  belongs_to :user
+
   validate :title, :body, :image, :category_id
   validate :image_content_type
 
