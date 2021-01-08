@@ -2,8 +2,9 @@
 
 .wrapper
   .main-content
-    - @blogs.each do |blog|
-      = render partial: "blog", locals: { blog: blog}
+    = render @blogs
+    -# - @blogs.each do |blog|
+    -#   = render partial: "blog", locals: { blog: blog}
 
   = render 'side'
 
