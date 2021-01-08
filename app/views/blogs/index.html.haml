@@ -3,10 +3,10 @@
 .wrapper
   .main-content
     = render @blogs
-    
-    .pagenate
-      = paginate(@blogs)
 
   = render 'side'
+
+.pagenate
+  = paginate(@blogs)
 
 = render "footer"

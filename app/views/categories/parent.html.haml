@@ -22,9 +22,10 @@
                 %td= render 'blogs/tag_list', tag_list: blog.tag_list
               .blog-user
                 = blog.user.name
-    .pagenate
-      = paginate(@parent)
 
   = render 'blogs/side'
   
+.pagenate
+  = paginate(@parent)
+
 = render "blogs/footer"

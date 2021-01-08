@@ -3,9 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .contact-box {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60vw;
+  width: calc(100vw - 45vw);
   .contact-form {
     background-color: #fff;
     border: 2px solid lightgrey;
