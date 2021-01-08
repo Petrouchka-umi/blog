@@ -21,16 +21,18 @@
     .blog-user
       = @blog.user.name
 
-  .nav-box
-    - if current_user
-      .edit
-        = link_to '編集', edit_blog_path(@blog)
-      .destory
-        = link_to '削除', @blog, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }
-      .back
-        = link_to '戻る', blogs_path, class:"back"
-    - else
-      .back
-        = link_to '戻る', blogs_path, class:"back"
+  = render 'side'
+
+.nav-box
+  - if current_user
+    .edit
+      = link_to '編集', edit_blog_path(@blog)
+    .destory
+      = link_to '削除', @blog, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }
+    .back
+      = link_to '戻る', blogs_path, class:"back"
+  - else
+    .back
+      = link_to '戻る', blogs_path, class:"back"
 
   = render "footer"

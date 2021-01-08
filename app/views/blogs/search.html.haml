@@ -1,0 +1,13 @@
+= render "header"
+
+.wrapper
+  .main-content
+    - @blogs.each do |blog|
+      = render partial: "blog", locals: { blog: blog}
+
+    .pagenate
+      = paginate(@blogs)
+
+  = render 'side'
+
+= render "footer"

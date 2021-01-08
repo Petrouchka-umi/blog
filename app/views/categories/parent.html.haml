@@ -4,6 +4,7 @@
   = @category
 .wrapper
   .main-content
+    -# = render partial: "blog", locals: { blog: blog}
     - @parent.each do |blog|
       .blog-content
         = link_to blog do
@@ -24,6 +25,6 @@
     .pagenate
       = paginate(@parent)
 
-  -# = render 'blogs/side'
+  = render 'blogs/side'
   
 = render "blogs/footer"

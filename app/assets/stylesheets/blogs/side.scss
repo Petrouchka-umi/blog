@@ -1,17 +1,43 @@
 .side-contents {
   margin: 0 20px;
-  margin-top: 20px;
-  width: calc(100vw - 75vw);
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
+  // width: calc(100vw - 75vw);
   .search-box {
-    height: 200px;
-    background-color: lightsteelblue;
+    margin-top: 20px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid snow;
+    border-radius: 20px;
+    .search-comment {
+      margin: 10px 0 0 10px;
+      font-size: 20px;
+      color: gray;
+    }
+    .search_form {
+      margin: 5px 10px;
+    }
   }
   .profile-box {
     margin: 20px 0;
-    height: 400px;
-    background-color: lightslategray;
+    height: 450px;
+    background-color: #fff;
+    // border: 2px solid snow;
+    border: 2px solid lightgrey;
+    border-radius: 20px;
   }
   
+}
 
+@media screen and (max-width:920px) {
+  .side-contents {
+    width: calc(100vw - 25vw);
+  }
+}
+  
+.search-box {
+  height: 150px;
+  background-color: lightsteelblue;
+  .search_form {
+    margin: 10px 0;
+  }
 }

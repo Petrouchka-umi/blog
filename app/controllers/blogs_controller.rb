@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.includes(:user).order("created_at DESC").page(params[:page]).per(10)
+    @blogs = Blog.includes(:user).order("created_at DESC").page(params[:page]).per(3)
 
     if params[:tag_name]
       @blogs = Blog.tagged_with("#{params[:tag_name]}")
@@ -64,6 +64,10 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url, notice: '記事が削除されました' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    @blogs = Blog.search(params[:title_key]).order("created_at DESC").page(params[:page]).per(10)
   end
 
   private

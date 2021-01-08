@@ -3,11 +3,16 @@
   width: clca(100vw - 20vw);
   display: flex;
   justify-content: center;
+  // justify-content: space-between;
+  flex-wrap: wrap;
   .main-content {
     display: flex;
     flex-direction: column;
     .blog-content {
       margin: 15px 0;
+    }
+    .pagenate{
+      text-align: center;
     }
   }
 }

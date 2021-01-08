@@ -12,4 +12,13 @@ class Blog < ApplicationRecord
     extension = ['image/png', 'image/jpg', 'image/jpeg']
     errors.add(:image, "の拡張子が間違っています") unless image.content_type.in?(extension)
   end
+
+  def self.search(title)
+    if title != ""
+      Blog.where('title LIKE(?)', "%#{title}%")
+    else
+      Blog.all
+    end
+  end
+
 end
