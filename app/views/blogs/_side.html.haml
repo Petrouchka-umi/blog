@@ -3,7 +3,9 @@
     .search-comment 記事検索
     = form_with url: search_blogs_path, method: :get, class: "search_form", local: true do |f|
       = f.text_field :title_key, class: "search-input"
-      = f.submit '検索', class: "search_btn"
+      %button{type: "submit", class: "submit"}
+        .search-icon.fas.fa-search
+      -# = f.submit '検索', class: "search_btn" do
 
 
   .profile-box

@@ -5,7 +5,6 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.includes(:user).order("created_at DESC").page(params[:page]).per(3)
-    
     if params[:tag_name]
       @blogs = Blog.tagged_with("#{params[:tag_name]}")
     end

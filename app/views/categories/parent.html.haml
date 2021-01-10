@@ -20,8 +20,8 @@
                 = blog.category.name 
               .blog-tags
                 %td= render 'blogs/tag_list', tag_list: blog.tag_list
-              -# .blog-user
-              -#   = blog.user.name
+              .blog-user
+                = blog.user.name
 
   = render 'blogs/side'
   

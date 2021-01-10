@@ -14,9 +14,23 @@
       color: gray;
     }
     .search_form {
-      margin: 5px 10px;
+      margin: 10px;
+      position: relative;
+      .search-input {
+        border: 2px solid lightgray;
+        border-radius: 10px;
+        height: 23px;
+        background-color: whitesmoke;
+      }
+      .search-icon {
+        color: steelblue;
+        position: absolute;
+        right: 25px;
+        top: 9px;
+      }
     }
   }
+
   .profile-box {
     margin: 20px 0;
     height: 450px;
@@ -32,12 +46,13 @@
   .side-contents {
     width: calc(100vw - 25vw);
   }
-}
-  
-.search-box {
-  height: 150px;
-  background-color: lightsteelblue;
-  .search_form {
-    margin: 10px 0;
+  .search-input {
+    width: 69vw;
+    margin: 0 10px;
   }
 }
+
+.submit {
+  background-color: #fff;
+  border: none;
+}  
