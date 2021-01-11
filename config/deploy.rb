@@ -7,7 +7,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 lock '3.14.1'
 
 # Capistranoのログの表示に利用する
-set :application, 'umi-blog'
+set :application, 'blog'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:Petrouchka-umi/blog.git'
