@@ -21,7 +21,8 @@
     .blog-user
       投稿者：
       %span.blog-user-name
-        = @blog.user.name
+        = @blog.user_id
+        -# = @blog.user.name
 
   = render 'side'
 
