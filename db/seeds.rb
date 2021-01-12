@@ -8,8 +8,19 @@
 require './db/seeds/category.rb'
 
 User.create!(
+  id: 1,
   name: 'umi',
   email: ENV['email01'],
   password: ENV['password01'],
   admin: true
 )
+
+User.create!(
+  id: 2,
+  name: 'KaWa',
+  email: ENV['email02'],
+  password: ENV['password02'],
+  admin: true
+)
+
+
