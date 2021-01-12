@@ -22,7 +22,7 @@ CarrierWave.configure do |config|
     config.fog_provider = 'fog/aws'
     config.fog_directory  = 'umi-blog'
     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/umi-blog'
-    # iam_profile
+    config.fog_public = false 
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
