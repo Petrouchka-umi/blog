@@ -1,5 +1,3 @@
-	
-server '13.115.220.114', user: 'ec2-user', roles: %w{app db web}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -44,20 +42,24 @@ server '13.115.220.114', user: 'ec2-user', roles: %w{app db web}
 # Global options
 # --------------
 #  set :ssh_options, {
-#    keys: %w(/home/user_name/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
-#
-# The server-based syntax can be used to override options:
-# ------------------------------------
-# server "example.com",
-#   user: "user_name",
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+  #    keys: %w(/home/user_name/.ssh/id_rsa),
+  #    forward_agent: false,
+  #    auth_methods: %w(password)
+  #  }
+  #
+  # The server-based syntax can be used to override options:
+  # ------------------------------------
+  # server "example.com",
+  #   user: "user_name",
+  #   roles: %w{web app},
+  #   ssh_options: {
+    #     user: "user_name", # overrides user setting above
+    #     keys: %w(/home/user_name/.ssh/id_rsa),
+    #     forward_agent: false,
+    #     auth_methods: %w(publickey password)
+    #     # password: "please use keys"
+    #   }
+
+server '13.115.220.114', user: 'ec2-user', roles: %w{app db web}
+
+set :ssh_options, keys: '~/.ssh/umi-blog.pem' 
