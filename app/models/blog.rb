@@ -2,7 +2,7 @@ class Blog < ApplicationRecord
   has_rich_text :body
   acts_as_taggable 
   mount_uploader :image, ImageUploader
-  belongs_to :category, dependent: :destroy
+  belongs_to :category
   belongs_to :user
 
   validate :title, :body, :image, :category_id
