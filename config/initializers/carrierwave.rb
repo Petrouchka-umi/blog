@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'umi-bog'
+  config.fog_directory  = 'umi-blog'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/umi-blog'
 end
