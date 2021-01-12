@@ -2,7 +2,7 @@
   = link_to blog_path(blog) do
     .blog-box
       .blog-image
-        = image_tag blog.image.url, class:'img-fluid' 
+        = image_tag asset_path(blog.image.url), class:'img-fluid' 
       .blog-nav
         .blog-time
           = blog.created_at.strftime("%Y年%m月%d日")

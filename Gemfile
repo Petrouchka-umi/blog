@@ -84,3 +84,5 @@ gem 'ancestry'
 gem 'dotenv-rails'
 
 gem 'kaminari'
+
+gem 'fog-aws'
