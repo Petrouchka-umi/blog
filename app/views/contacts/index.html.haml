@@ -1,28 +1,29 @@
 = render "blogs/header"
 
 .wrapper
-
-  %h2 お問い合わせ一覧
-  %table
-    %thead
-      %tr
-        %th 名前
-        %th メール
-        %th 題名
-        %th 
-        %th
-        %th
-
-    %tbody
-      - @contacts.each do |contact|
+  .contact-message
+    %h2 お問い合わせ一覧
+  .contact-lists
+    %table
+      %thead
         %tr
-          %td= contact.name
-          %td= contact.email
-          %td= contact.title
-          -# %td= contact.content
-          %td= link_to '詳細', contact
-          %td= link_to '編集', edit_contact_path(contact)
-          %td= link_to '削除', contact, method: :delete, data: { confirm: 'Are you sure?' }
+          %th 名前
+          %th メール
+          %th 題名
+          %th 
+          %th
+          %th
+
+      %tbody
+        - @contacts.each do |contact|
+          %tr
+            %td= contact.name
+            %td= contact.email
+            %td= contact.title
+            -# %td= contact.content
+            %td= link_to '詳細', contact
+            %td= link_to '編集', edit_contact_path(contact)
+            %td= link_to '削除', contact, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

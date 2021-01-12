@@ -6,15 +6,16 @@
     margin-top: 20px;
     height: 100px;
     background-color: #fff;
-    border: 2px solid snow;
-    border-radius: 20px;
+    // border: 2px solid snow;
+    border: 1px solid lightgray;
+    border-radius: 10px;
     .search-comment {
-      margin: 10px 0 0 10px;
+      margin: 10px 0 0 20px;
       font-size: 20px;
       color: gray;
     }
     .search_form {
-      margin: 10px;
+      margin: 10px 0 0 17px;
       position: relative;
       .search-input {
         border: 2px solid lightgray;
@@ -25,7 +26,7 @@
       .search-icon {
         color: steelblue;
         position: absolute;
-        right: 25px;
+        right: 27px;
         top: 9px;
       }
     }
@@ -35,8 +36,8 @@
     margin: 20px 0;
     height: 450px;
     background-color: #fff;
-    // border: 1px solid lightgrey;
-    border-radius: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
   }
   
 }
@@ -46,8 +47,7 @@
     width: calc(100vw - 25vw);
   }
   .search-input {
-    width: 69vw;
-    margin: 0 10px;
+    width: 70vw;
   }
 }
 
