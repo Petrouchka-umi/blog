@@ -51,14 +51,24 @@
   margin: 10px 0;
 }
 
-.actions {
-  width: 50px;
-  margin: 20px 0;
-  .submit {
-    border: 1px solid lightgrey;
-    color: gray;
-    background-color: #fff;
-    font-size: 20px;
-    border-radius: 10px;
+.btn-count-box {
+  display: flex;
+  .actions {
+    width: 50px;
+    margin: 20px 0;
+    .submit {
+      border: 1px solid lightgrey;
+      color: gray;
+      background-color: #fff;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+  }
+  .count-length {
+    margin: 27px 150px;
+    font-size: 27px;
+    font-family: "Cormorant Garamond", serif;
+    color: deepskyblue;
   }
 }
+

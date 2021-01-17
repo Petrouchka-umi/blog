@@ -7,4 +7,28 @@
         .search-icon.fas.fa-search
 
   .profile-box
-  
+    .profile-title プロフィール
+    .side-img-box
+      = image_tag asset_path('IMG_2157.jpeg'), alt: 'umi画像', class: 'umi-img'
+    .text-box
+      管理者：umi
+      %br
+      駆け出しエンジニア
+      %br
+    .parson-box
+    .side-img-box
+      =  image_tag asset_path('IMG_1357.jpeg'), alt: 'wata画像', class: 'wata-img'
+    .text-box
+      ライター：KaWa
+      %br
+      作業療法士
+      %br
+      投資勉強中！!
+      %br
+      FIREが目標
+
+  .category-box
+    .category-title カテゴリ一
+    .side-category
+      - @parents.each do |parent|
+        = link_to "#{parent.name}", parent_category_path(parent), class: "side-parent"

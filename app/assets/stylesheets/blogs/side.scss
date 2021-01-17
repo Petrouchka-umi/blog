@@ -34,12 +34,59 @@
 
   .profile-box {
     margin: 20px 0;
-    height: 450px;
     background-color: #fff;
     border: 1px solid lightgrey;
     border-radius: 10px;
+    .profile-title {
+      margin: 15px;
+      font-size: 20px;
+      color:gray;
+    }
+    .text-box {
+      margin: 10px;
+      color: gray;
+      line-height: 1.5em;
+    }
+    .umi-img {
+      margin: 5px;
+      height: 70px;
+      min-width: 180px;
+      object-fit: cover;
+      border: 2px solid skyblue;
+    }
+    .wata-img {
+      height: 70px;
+      min-width: 180px;
+      object-fit: cover;
+      object-position: 0% 50%;
+      border: 2px solid skyblue;
+    }
+    .parson-box {
+      margin: 10px 0;
+      height: 10px;
+    }
   }
   
+  .category-box {
+    margin: 20px 0;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    .category-title {
+      margin: 10px;
+      color: gray;
+      font-size: 20px;
+    }
+    .side-category {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 20px;
+      font-size: 18px;
+      .side-parent {
+        margin: 8px 0;
+      }
+    }
+  }
 }
 
 @media screen and (max-width:920px) {

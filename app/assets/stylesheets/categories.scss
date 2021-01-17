@@ -3,13 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .category-contents {
-  // background-color: #FFF;
   border: 1px solid snow;
   border-radius: 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
   .category-parent {
-    padding: 20px 0;
+    width: 22vw;
+    padding: 95px 0;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 20px 5px;
+    background-color:white;
+    text-align: center;
     .parent {
-      font-size: 25px;
+      font-size: 30px;
     }
   }
 }
