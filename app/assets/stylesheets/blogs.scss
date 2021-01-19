@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html {
   background-color: snow;
-  // background-color: #F7F7F7;
 }
 
 header {
@@ -39,8 +38,6 @@ h1 {
     width: 100vw;
     height: 150px;
     object-fit: cover;
-    // background-image:url("IMG_6258.png");
-    margin-left: -8px;
   }
   
   .header-list {
@@ -72,4 +69,31 @@ a {
 
 li {
   list-style: none;
+}
+
+// paginate
+.pagination{
+  margin: auto;
+  color: deepskyblue;
+  display: flex;
+  justify-content: center;
+}
+.pagination span{
+  text-align: center;
+  width: 60px;
+  margin: 5px;
+  transition: .3s;
+  transform: scale(1);
+}
+.pagination span:hover{
+  transition: .3s;
+  transform: scale(1.1);
+}
+.pagination span a:hover{
+  transition: .3s;
+  transform: scale(1.1);
+}
+span {
+  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
 }

@@ -2,11 +2,11 @@
 // var count = input.nodeValue.length
 // console.log(count);
 
-const input = document.getElementById("text-field");
-const count = document.getElementById("textlength");
-input.addEventListener("keyup", function() {
-  count.textlength = input.value.length;
-});
+// const input = document.getElementById("text-field");
+// const count = document.getElementById("textlength");
+// input.addEventListener("keyup", function() {
+//   count.textlength = input.value.length;
+// });
 
 $(function(){
   $('#text-field').keyup(function(){

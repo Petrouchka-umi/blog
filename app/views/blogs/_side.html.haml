@@ -7,25 +7,31 @@
         .search-icon.fas.fa-search
 
   .profile-box
-    .profile-title プロフィール
     .side-img-box
       = image_tag asset_path('IMG_2157.jpeg'), alt: 'umi画像', class: 'umi-img'
+    .img-box
+      = image_tag asset_path('IMG_1553.jpeg'), alt: 'umi画像', class: 'profile-img'
     .text-box
-      管理者：umi
+      管理者：
+      %span.name umi
       %br
-      駆け出しエンジニア
+      ●駆け出しエンジニア
       %br
+
     .parson-box
     .side-img-box
       =  image_tag asset_path('IMG_1357.jpeg'), alt: 'wata画像', class: 'wata-img'
+    .img-box
+      = image_tag asset_path('IMG_1355.jpeg'), alt: 'kawa画像', class: 'profile-img'
     .text-box
-      ライター：KaWa
+      ライター：
+      %span.name KaWa
       %br
-      作業療法士
+      ●作業療法士
       %br
-      投資勉強中！!
+      投資勉強中！!！
       %br
-      FIREが目標
+      FIREが目標です。
 
   .category-box
     .category-title カテゴリ一
