@@ -72,8 +72,8 @@ Rails.application.configure do
     :port => '587',
     :domain => 'gmail.com',
     :authentication => 'plain',
-    :user_name => Rails.application.credentials.gmail[:Google_mail],
-    :password => Rails.application.credentials.gmail[:Gmail_Password]
+    :user_name => ENV['Google_mail'],
+    :password => ENV['Gmail_Password']
   }
 
 
