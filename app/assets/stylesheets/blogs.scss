@@ -51,15 +51,22 @@ h1 {
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 150px;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
+  background-color: lightslategray;
   .top {
     margin: 20px 0;
+    height: 22px;
+    background-color: white;
   }
-  .footer_title {
-    color: deepskyblue;
+  .footer-box {
+    height: 40px;
+    .footer_title {
+      color: deepskyblue;
+      color: white;
+    }
   }
 }
 
