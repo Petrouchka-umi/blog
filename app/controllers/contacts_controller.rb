@@ -28,7 +28,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     respond_to do |format|
       if @contact.save
-        ContactMailer.contact_mail(@contact).deliver_now
+        # ContactMailer.contact_mail(@contact).deliver_now
         format.html { redirect_to new_contact_path, notice: 'お問い合わせ内容が送信されました' }
         format.json { render :new, status: :created, location: @contact }
       else

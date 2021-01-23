@@ -1,7 +1,10 @@
+- set_meta_tags title: 'お問い合わせ', description: '新規お問い合わせ', noindex: true
+
 = render "blogs/header"
+  
+%p#notice= notice
 
 .wrapper
-  %p#notice= notice
   .contact-box
     %h2 お問い合わせ
     .contact-form
@@ -13,6 +16,5 @@
   .contact-box
     = link_to "お問い合わせ一覧へ", contacts_path
   -# = link_to 'Back', contacts_path
-
 
 = render "blogs/footer"

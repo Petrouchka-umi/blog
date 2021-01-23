@@ -75,14 +75,14 @@ gem 'font-awesome-sass'
 gem 'acts-as-taggable-on', '6.5.0'
 
 gem 'mini_magick'
-
 gem 'carrierwave'
 
 gem 'ancestry'
 
-# 環境変数設定
 gem 'dotenv-rails'
 
 gem 'kaminari'
 
 gem 'fog-aws'
+
+gem 'meta-tags'
