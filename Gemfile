@@ -86,3 +86,7 @@ gem 'kaminari'
 gem 'fog-aws'
 
 gem 'meta-tags'
+
+gem 'google-analytics-rails'
+
+# gem 'google-api-client' 
