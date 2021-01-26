@@ -35,4 +35,4 @@
 yarn-debug.log*
 .yarn-integrity
 /.env
-google-auth-card.json
+/.google-auth-card.json
