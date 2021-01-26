@@ -89,4 +89,4 @@ gem 'meta-tags'
 
 gem 'google-analytics-rails'
 
-# gem 'google-api-client' 
+gem 'google-api-client'

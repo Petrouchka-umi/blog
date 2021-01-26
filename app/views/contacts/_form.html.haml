@@ -8,16 +8,16 @@
   .contact-box
     .contact-field
       = f.label :name, "名前（必須）"
-      = f.text_field :name, class: "field"
+      = f.text_field :name, class: "field", placeholder: "20文字以内"
     .contact-field
       = f.label :email, "メールアドレス（必須）"
-      = f.text_field :email, class: "field"
+      = f.text_field :email, class: "field", placeholder: "30文字以内"
     .contact-field
       = f.label :title, "題名"
-      = f.text_field :title, class: "field"
+      = f.text_field :title, class: "field", placeholder: "20文字以内"
     .contact-field
-      = f.label :content, "メッセージ本文(300文字まで)"
-      = f.text_area :content, class: "text-field "
+      = f.label :content, "メッセージ本文"
+      = f.text_area :content, class: "text-field ", placeholder: "300文字以内"
     .contact-actions
       = f.submit '送信', class: "submit"
 
