@@ -1,7 +1,7 @@
 # README
 
 # URL
-http://13.115.220.114/
+http://www.umi-blog-ec2.com
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
