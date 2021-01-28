@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require './db/seeds/category.rb'
 
 User.create!(
   id: 1,
@@ -23,4 +22,17 @@ User.create!(
   admin: true
 )
 
+# カテゴリー
+life = Category.create!(name: "自己啓発")
 
+money = Category.create!(name: "マネー")
+
+programming = Category.create!(name: "プログラミング")
+
+technology = Category.create!(name: "ITインフラ")
+
+health　= Category.create!(name: "健康")
+
+gourmet = Category.create!(name: "グルメ")
+
+hobby　= Category.create!(name: "趣味")
