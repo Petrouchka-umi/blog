@@ -1,0 +1,15 @@
+- set_meta_tags title: 'タグ検索', description: 'タグ表示'
+
+= render "header"
+
+.parent-name
+  タグ検索
+
+.wrapper
+  .main-content
+    - @blog_tags.each do |blog|
+      = render partial: "blog", locals: { blog: blog}
+
+  = render 'side'
+
+= render "footer"

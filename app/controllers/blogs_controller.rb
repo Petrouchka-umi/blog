@@ -1,32 +1,23 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
-  # GET /blogs
-  # GET /blogs.json
   def index
     @blogs = Blog.includes(:user).order("created_at DESC").page(params[:page]).per(10)
-    if params[:tag_name]
-      @blogs = Blog.tagged_with("#{params[:tag_name]}")
-    end
+    # if params[:tag_name]
+    #   @blog_tags = Blog.tagged_with("#{params[:tag_name]}")
+    # end
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
   def show
-    # @parent = @blog.category
   end
 
-  # GET /blogs/new
   def new
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
   def edit
   end
 
-  # POST /blogs
-  # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
     respond_to do |format|
@@ -40,8 +31,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
   def update
     respond_to do |format|
       if @blog.update(blog_params)
@@ -54,8 +43,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
   def destroy
     @blog.destroy
     respond_to do |format|
@@ -66,6 +53,13 @@ class BlogsController < ApplicationController
 
   def search
     @blogs = Blog.search(params[:title_key]).order("created_at DESC").page(params[:page]).per(10)
+  end
+
+  def tags
+    
+    if params[:tag_name]
+      @blog_tags = Blog.tagged_with("#{params[:tag_name]}")
+    end
   end
 
   private
