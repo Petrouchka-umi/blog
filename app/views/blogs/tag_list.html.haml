@@ -1,0 +1,17 @@
+- set_meta_tags title: 'タグ一覧', description: 'タグ一覧表示'
+
+= render "header"
+
+.parent-name
+  タグ一覧
+
+.wrapper
+  .main-content
+    .tags-list
+      - @tags.each do |tag|
+        .tags
+          = link_to tag, tags_blogs_path(tag: tag.name), class: "tag-tag"
+
+  = render 'side'
+
+= render "footer"

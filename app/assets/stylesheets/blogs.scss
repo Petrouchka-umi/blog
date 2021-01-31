@@ -80,6 +80,32 @@ li {
 .badge {
   display: inline;
 }
+
+.tags-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 55vw;
+  .tags {
+    border-radius: 10px; 
+    border: 1px solid lightgray ;
+    background-color: white;
+    padding: 8px;
+    margin: 15px 20px;
+    font-size: 22px;
+    box-shadow: 4px 4px lightslategray;
+    width: 190px;
+  }
+}
+
+@media screen and (max-width:920px) {
+  .tags-list {
+    width: 90vw;
+    margin-left: 40px;
+  }
+}
+
+
 // paginate
 .pagination{
   margin: auto;

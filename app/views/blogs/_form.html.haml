@@ -20,11 +20,11 @@
           = f.text_field :tag_list, value: @blog.tag_list.join(','), class: "tag-list_form", placeholder: "タグ #〇〇"
         .tag-lists
           %ul.tag-list
-            %li.tag #自己啓発
-            %li.tag #マネー
-            %li.tag #プログラミング
-            %li.tag #健康
-            %li.tag #グルメ
+            %li.tag [" ，"で区切る]
+            %li.tag #読書
+            %li.tag #車
+            %li.tag #旅行
+            %li.tag #お金
       .images
         = f.label :image, "記事トップ画像"
         = f.file_field :image, accept: "image/png, image/jpeg, image/gif"

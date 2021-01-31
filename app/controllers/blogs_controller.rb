@@ -3,9 +3,6 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.includes(:user).order("created_at DESC").page(params[:page]).per(10)
-    # if params[:tag_name]
-    #   @blog_tags = Blog.tagged_with("#{params[:tag_name]}")
-    # end
   end
 
   def show
@@ -56,10 +53,15 @@ class BlogsController < ApplicationController
   end
 
   def tags
-    
     if params[:tag_name]
       @blog_tags = Blog.tagged_with("#{params[:tag_name]}")
+    else params[:tag]
+      @blog_tags = Blog.tagged_with("#{params[:tag]}")
     end
+  end
+
+  def tag_list
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   private

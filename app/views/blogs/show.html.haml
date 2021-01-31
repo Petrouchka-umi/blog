@@ -11,8 +11,8 @@
         = @blog.created_at.strftime("%Y年%m月%d日")
       .blog-category-show
         カテゴリー：
+        -# = link_to "#{@blog.category.name}", parent_category_path(@parents)
         = @blog.category.name
-        -# = link_to "#{@blog.category.name}", parent_category_path(category_id)
       .blog-tags
         タグ：
         = render 'blogs/tag_list', tag_list: @blog.tag_list
