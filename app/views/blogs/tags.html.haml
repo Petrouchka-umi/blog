@@ -11,6 +11,10 @@
       - @blog_tags.each do |blog|
         = render partial: "blog", locals: { blog: blog}
 
+  
   = render 'side'
+
+.pagenate
+= paginate(@blog_tags)
 
 = render "footer"

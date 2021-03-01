@@ -54,14 +54,14 @@ class BlogsController < ApplicationController
 
   def tags
     if params[:tag_name]
-      @blog_tags = Blog.tagged_with("#{params[:tag_name]}")
+      @blog_tags = Blog.tagged_with("#{params[:tag_name]}").order("created_at DESC").page(params[:page]).per(10)
     else params[:tag]
-      @blog_tags = Blog.tagged_with("#{params[:tag]}")
+      @blog_tags = Blog.tagged_with("#{params[:tag]}").order("created_at DESC").page(params[:page]).per(10)
     end
   end
 
   def tag_list
-    @tags = ActsAsTaggableOn::Tag.all
+    @tags = ActsAsTaggableOn::Tag.all.order("created_at DESC")
   end
 
   private
